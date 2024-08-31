@@ -1,0 +1,80 @@
+body{
+    background: #CAF0F8;
+}
+.overview{
+    background: #03045E;
+    margin: 30px 200px ;
+    padding: 15px 50px;
+    text-align: center;
+    border-radius: 20px;
+    border: 4px solid rgb(255, 208, 0);
+    margin-bottom: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+.overview:hover {
+    transform: scale(1.2); 
+  }
+.subheading{
+    color:rgb(255, 208, 0);
+    padding-bottom:10px;
+    font-size:25px;
+    font-weight: bold;
+}
+.description{
+    color: #ADE8F4;
+    
+}
+#performancemetrics{
+    background: #03045E;
+    margin: 30px 200px ;
+    padding: 15px 50px;
+    text-align: center;
+    border-radius: 20px;
+    border: 4px solid rgb(255, 208, 0);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+#performancemetrics:hover {
+    transform: scale(1.15); 
+  }
+.desc1{
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(255, 208, 0);
+}
+.desc2{
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    padding-bottom: 5px;
+    
+}
+.desc3{
+    font-size: 15px;
+    color: #CAF0F8;
+}
+ul.lisst{
+    list-style: none;
+}
+.btn-submit {
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: rgb(17, 143, 17);
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 270px;
+    height: 50px;
+    font-size: 18px;
+    margin-bottom: 50px;
+
+}
+
+.btn-submit:hover {
+    background-color: rgb(22, 178, 22);
+}
+#buttonn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

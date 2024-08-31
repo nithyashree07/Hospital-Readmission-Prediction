@@ -1,0 +1,198 @@
+body{
+    background: #CAF0F8;
+}
+.whatis{
+    background: #03045E;
+    color: #CAF0F8;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+}
+
+.logoimg1{
+    width: 700px;
+    height: 400px;
+    padding-left: 15%; 
+}
+
+h5{
+    text-align: center;
+    padding-left: 50%; 
+    padding-right: 15%;
+    padding-bottom: 40px;
+    font-size: 20px;
+    position: absolute;
+    top: 60%;
+    
+}
+#why{
+    color: #03045E;
+    font-size: 30px; 
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.containerss{
+    display: flex;
+    flex-direction: row;
+}
+.container1{
+    background: #03045E;
+    color: white;
+    width: 350px;
+    padding: 20px 20px;
+    text-align: center;
+    margin: 10px 50px;
+    margin-left: 140px;
+    border-radius: 30px;
+    border: 4px solid rgb(255, 208, 0);
+    transition: transform 0.3s ease-in-out;
+}
+.container1:hover {
+    transform: scale(1.2); 
+  }
+
+.container2{
+    background: #03045E;
+    color: white;
+    width: 350px;
+    padding: 20px 20px;
+    text-align: center;
+    margin: 10px 50px;
+    border-radius: 30px;
+    border: 4px solid rgb(255, 208, 0);
+    transition: transform 0.3s ease-in-out;
+}
+.container2:hover {
+    transform: scale(1.2); 
+  }
+.container3{
+    background: #03045E;
+    color: white;
+    width: 350px;
+    padding: 20px 20px;
+    text-align: center;
+    margin: 10px 50px;
+    border-radius: 30px;
+    border: 4px solid rgb(255, 208, 0);
+    transition: transform 0.3s ease-in-out;
+}
+.container3:hover {
+    transform: scale(1.2); 
+  }
+
+.containerss,
+h6{
+    font-size: 15px;
+    letter-spacing: 0.7px;
+}
+#how{
+    color: #03045E;
+    font-size: 30px; 
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;   
+}
+.points{
+    background: #03045E;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+#stepbystep{
+    color: rgb(255, 208, 0);
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+.points,
+p{
+    font-size: 20px;
+}
+
+.benefits-section {
+    padding: 10px 0;
+    /* background-color: #f8f9fa; */
+    text-align: center;
+    
+  }
+
+  .benefits-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #03045E;
+    font-weight: bold;
+  }
+
+  .benefit-card {
+    border: 1px solid #e0e0e0;
+    margin-top: 10px;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    background-color: #03045E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    height: 300px;
+    border: 4px solid rgb(255, 208, 0);
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-30px);
+  }
+
+  .benefit-icon {
+    font-size: 50px;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+
+  .benefit-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(255, 208, 0);
+  }
+
+  .benefit-description {
+    font-size: 16px;
+    color: #90E0EF;
+  }
+
+#ready{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #03045E;
+  }
+  #desc{
+    font-size: 15px;
+    color:  rgb(4, 67, 44);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  button{
+    background: rgb(17, 143, 17);
+    width: 270px;
+    height: 50px;
+   
+  }
+.button{
+    font-size: 18px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+

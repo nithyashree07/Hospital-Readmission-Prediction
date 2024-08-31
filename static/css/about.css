@@ -1,0 +1,32 @@
+body{
+    background: #CAF0F8;
+}
+
+.overview{
+    background: #03045E;
+    margin: 30px 200px ;
+    padding: 15px 50px;
+    text-align: center;
+    border-radius: 20px;
+    border: 4px solid rgb(255, 208, 0);
+    margin-bottom: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+.overview:hover {
+    transform: scale(1.2); 
+  }
+
+  .subheading{
+    color:rgb(255, 208, 0);
+    padding-bottom:10px;
+    font-size:25px;
+    font-weight: bold;
+}
+.description{
+    color: #ADE8F4;
+    
+}
+ul{
+    color: #ffffff;
+    list-style-type: none;
+}

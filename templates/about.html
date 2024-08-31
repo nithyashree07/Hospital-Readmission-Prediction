@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Care Path - Hospital Readmission Prediction</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="static\css\style.css">
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}"/> -->
+  <link rel="stylesheet" href="static\css\about.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="./" class="navbar-brand">Care Path</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li >
+          <a href="{{ url_for('home') }}">Home</a>
+        </li>
+        <li>
+          <a href="{{ url_for('datainput') }}">Data Input</a>
+        </li>
+        <!-- <li>
+          <a href="{{ url_for('datainput') }}">Prediction Results</a>
+        </li> -->
+        <li >
+          <a href="{{ url_for('modelinsight') }}">Model Insight</a>
+        </li>
+        <li class="active">
+          <a href="{{ url_for('about') }}">About</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container" style="margin-top: 80px;">
+  <h1 class="text-center" style="margin-top: 30px; font-size: 32px; font-weight: bold;">About Us</h1>
+  <p class="text-center" style="margin-top: 40px; font-size: 18px; font-weight: bold;">"Welcome to <strong>Care Path</strong>, your trusted partner in improving patient care through advanced predictive analytics."</p>
+</div>
+
+<div class="overview">
+  <h2 class="subheading"><i class="fas fa-chart-line"></i>&nbsp; Our Mission</h2>
+  <p class="description">At Care Path, our mission is to revolutionize the healthcare landscape by providing cutting-edge technology solutions that enable better patient outcomes. We aim to bridge the gap between data science and clinical care by delivering predictive insights that healthcare providers can trust and act upon.
+  </p>
+</div>
+
+<div class="overview">
+  <h2 class="subheading"><i class="fas fa-chart-line"></i>&nbsp; Our Vision
+  </h2>
+  <p class="description">We envision a future where every healthcare provider has access to powerful, intuitive tools that help them make data-driven decisions. By leveraging the latest advancements in machine learning and artificial intelligence, we strive to create a healthcare environment where proactive care is the norm, not the exception.
+  </p>
+</div>
+
+<div class="overview">
+  <h2 class="subheading"><i class="fas fa-chart-line"></i>&nbsp; Meet Our Team</h2>
+  <p class="description">We are a diverse team technology enthusiasts, all dedicated to one goal: improving patient outcomes through innovation. Our team brings together expertise from various fields, allowing us to approach problems from multiple perspectives and develop comprehensive solutions.</p>
+  <ul>
+    <li>Nithya Shree K P</li>
+    <li>Niraimathi A K</li>
+    <li>Naveen Kumar V</li>
+    <li>Nimalanantham N</li>
+    <li>Pawin A</li>
+    <li>Nikhilesh V</li>
+  </ul>
+</div>
+
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Care Path - Hospital Readmission Prediction</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <!-- <link rel="stylesheet" href="static\css\style.css">
+  <link rel="stylesheet" href="static\css\datainput.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/datainput.css') }}">
+
+
+
+
+</head>
+<body>
+
+
+  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="./" class="navbar-brand">Care Path</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li >
+          <a href="{{ url_for('home') }}">Home</a>
+        </li>
+        <li class="active">
+          <a href="{{ url_for('datainput') }}">Data Input</a>
+        </li>
+        <!-- <li>
+          <a href="{{ url_for('datainput') }}">Prediction Results</a>
+        </li> -->
+        <li >
+          <a href="{{ url_for('modelinsight') }}">Model Insight</a>
+        </li>
+        <li >
+          <a href="{{ url_for('about') }}">About</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section>
+<div class="container" style="margin-top: 80px;">
+  <h1 class="text-center" style="margin-top: 30px; font-size: 32px; font-weight: bold; ">Enter Patient Data for Prediction</h1>
+  <p class="text-center" style="margin: 40px 0px 60px 0px;  font-size: 18px; font-weight: bold;">"Provide the necessary patient details below to get started with the hospital readmission prediction. Ensure that all fields are accurately filled out to get the best results."</p>
+</div>
+
+
+<div class="container">
+  <!-- Data Input Form -->
+  <form action="/predict" method="POST">
+      <!-- Age -->
+      <div class="form-group">
+          <label for="age">Age</label>
+          <select class="form-control" id="age" name="age">
+              <option>Select Age Range</option>
+              <option>[30-40)</option>
+              <option>[40-50)</option>
+              <option>[50-60)</option>
+              <option>[60-70)</option>
+              <option>[70-80)</option>
+          </select>
+      </div>
+
+
+      <!-- Time in Hospital -->
+      <div class="form-group">
+          <label for="time-in-hospital">Time in Hospital (Days)</label>
+          <input type="number" class="form-control" id="time-in-hospital" placeholder="Enter number of days" name="time-in-hospital">
+      </div>
+
+
+      <!-- Number of Lab Procedures -->
+      <div class="form-group">
+          <label for="num-lab-procedures">Number of Lab Procedures</label>
+          <input type="number" class="form-control" id="num-lab-procedures" name="num-lab-procedures" placeholder="Enter number of lab procedures">
+      </div>
+
+
+      <!-- Number of Procedures -->
+      <div class="form-group">
+          <label for="num-procedures">Number of Procedures</label>
+          <input type="number" class="form-control" id="num-procedures" name="num-procedures" placeholder="Enter number of procedures">
+      </div>
+
+
+      <!-- Number of Medications -->
+      <div class="form-group">
+          <label for="num-medications">Number of Medications</label>
+          <input type="number" class="form-control" id="num-medications" name="num-medications" placeholder="Enter number of medications">
+      </div>
+
+
+      <!-- Number of Outpatient Visits -->
+      <div class="form-group">
+          <label for="num-outpatient-visits">Number of Outpatient Visits</label>
+          <input type="number" class="form-control" id="num-outpatient-visits" name="num-outpatient-visits" placeholder="Enter number of outpatient visits">
+      </div>
+
+
+      <!-- Number of Inpatient Visits -->
+      <div class="form-group">
+          <label for="num-inpatient-visits">Number of Inpatient Visits</label>
+          <input type="number" class="form-control" id="num-inpatient-visits" name="num-inpatient-visits" placeholder="Enter number of inpatient visits" required>
+      </div>
+
+
+      <!-- Number of Emergency Visits -->
+      <div class="form-group">
+          <label for="num-emergency-visits">Number of Emergency Visits</label>
+          <input type="text" class="form-control" id="num-emergency-visits" name="num-emergency-visits" placeholder="Enter number of emergency visits">
+      </div>
+
+
+      <!-- Medical Specialty -->
+      <div class="form-group">
+          <label for="medical-specialty">Medical Specialty</label>
+          <select class="form-control" id="medical-specialty" name="medical-specialty">
+              <option>Select Specialty</option>
+              <option>Internal Medicine</option>
+              <option>Cardiology</option>
+              <option>Neurology</option>
+              <option>Oncology</option>
+              <option>Endocrinology</option>
+              <option value="Missing">Missing</option>
+          </select>
+      </div>
+
+
+     <!-- Primary Diagnosis -->
+     <div class="form-group">
+      <label for="primary-diagnosis">Primary Diagnosis</label>
+      <select  class="form-control" id="primary-diagnosis" name="primary-diagnosis">
+        <option value="">Select Specialty</option>
+        <option value="Circulatory">Circulatory</option>
+        <option value="Diabetes">Diabetes</option>
+        <option value="Digestive">Digestive</option>
+        <option value="Injury">Injury</option>
+        <option value="Musculoskeletal">Musculoskeletal</option>
+        <option value="Respiratory">Respiratory</option>
+        <option value="Missing">Missing</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <!-- Secondary Diagnosis -->
+    <div class="form-group">
+      <label for="secondary-diagnosis">Secondary Diagnosis</label>
+      <select  class="form-control" id="secondary-diagnosis" name="secondary-diagnosis">
+        <option value="">Select Specialty</option>
+        <option value="Circulatory">Circulatory</option>
+        <option value="Diabetes">Diabetes</option>
+        <option value="Digestive">Digestive</option>
+        <option value="Injury">Injury</option>
+        <option value="Musculoskeletal">Musculoskeletal</option>
+        <option value="Respiratory">Respiratory</option>
+        <option value="Missing">Missing</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <!-- Tertiary Diagnosis -->
+    <div class="form-group">
+      <label for="tertiary-diagnosis">Tertiary Diagnosis</label>
+      <select class="form-control" id="tertiary-diagnosis" name="tertiary-diagnosis">
+        <option value="">Select Specialty</option>
+        <option value="Circulatory">Circulatory</option>
+        <option value="Diabetes">Diabetes</option>
+        <option value="Digestive">Digestive</option>
+        <option value="Injury">Injury</option>
+        <option value="Musculoskeletal">Musculoskeletal</option>
+        <option value="Respiratory">Respiratory</option>
+        <option value="Missing">Missing</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+
+
+      <!-- Glucose Test -->
+      <div class="form-group">
+          <label for="glucose-test">Glucose Test</label>
+          <select class="form-control" id="glucose-test"  name="glucose-test">
+              <option>Select Test Result</option>
+              <option>no</option>
+              <option>normal</option>
+              <option>high</option>
+          </select>
+      </div>
+
+
+      <!-- A1C Test -->
+      <div class="form-group">
+          <label for="a1c-test">A1C Test</label>
+          <select class="form-control" id="a1c-test"  name="a1c-test">
+              <option>Select Test Result</option>
+              <option>no</option>
+              <option>normal</option>
+              <option>high</option>
+          </select>
+      </div>
+
+
+      <!-- Medication Change -->
+      <div class="form-group">
+        <label for="Medication Change">Medication Change</label>
+        <select class="form-control" id="Medication Change" name="medication-change">
+            <option>Select Test Result</option>
+            <option>yes</option>
+            <option>no</option>
+         
+        </select>
+    </div>
+
+
+      <!-- Diabetes Medication -->
+
+
+      <div class="form-group">
+        <label for="Diabetes Medication">Diabetes Medication</label>
+        <select class="form-control" id="Diabetes Medication" name="diabetes-medication">
+            <option>Select Test Result</option>
+            <option>yes</option>
+            <option>no</option>
+        </select>
+    </div>
+
+
+      <!-- Submit Button -->
+      <!-- <div id="buttonn">
+      <button type="submit" class="btn btn-primary btn-submit"><a href="pre.html" style="color:white; text-decoration:none;">Get Prediction</a></button> -->
+
+
+      <div id="buttonn">
+        <button type="submit" class="btn btn-primary btn-submit" onclick="submitForm(event)">Get Prediction</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<!-- <script>
+  function submitForm(event) {
+    event.preventDefault(); // Prevent default form submission
+    const numLabProcedures = document.getElementById('num-lab-procedures').value;
+    const numProcedures = document.getElementById('num-procedures').value;
+    const numMedications = document.getElementById('num-medications').value;
+    const numEmergencyVisits = document.getElementById('num-emergency-visits').value;
+
+
+    const glucoseTest = document.getElementById('glucose-test').value;
+    const a1cTest = document.getElementById('a1c-test').value;
+
+
+    // Redirect to prediction page with URL parameters
+    window.location.href = `/predict?num-lab-procedures=${numLabProcedures}&num-procedures=${numProcedures}&num-medications=${numMedications}&num-emergency-visits=${numEmergencyVisits}&glucose-test=${glucoseTest}&a1c-test=${a1cTest}`;
+  }
+ 
+</script> -->
+
+
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+</body>
+</html>
+
+
+
